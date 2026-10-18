@@ -1755,10 +1755,7 @@ xsetcursor(int cursor)
 void
 xseturgency(int add)
 {
-	XWMHints *h;
-
-	if (!(h = XGetWMHints(xw.dpy, xw.win)))
-		return;
+	XWMHints *h = XGetWMHints(xw.dpy, xw.win);
 
 	MODBIT(h->flags, add, XUrgencyHint);
 	XSetWMHints(xw.dpy, xw.win, h);

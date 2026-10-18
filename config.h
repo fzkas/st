@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrainsMono Nerd Font:pixelsize=14:antialias=true:autohint=true";
+static char *font = "JetBrains Mono:pixelsize=14:antialias=true:autohint=true";
 static int borderpx = 2;
 /*
  * What program is execed by st depends of these precedence rules:
@@ -94,34 +94,36 @@ unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"#282828", /* 0 black */
-	"#cc241d", /* 1 red */
-	"#98971a", /* 2 green */
-	"#d79921", /* 3 yellow */
-	"#458588", /* 4 blue */
-	"#b16286", /* 5 magenta */
-	"#689d6a", /* 6 cyan */
-	"#a89984", /* 7 white */
-
+		/* 8 normal colors */
+	"#1b1a29",  /* 0  black   */
+	"#e0709f",  /* 1  red     -> sunset pink */
+	"#8fb58f",  /* 2  green   (muted forest) */
+	"#f5b668",  /* 3  yellow  -> castle-sky orange */
+	"#7f8fd6",  /* 4  blue    */
+	"#b79ce6",  /* 5  magenta -> lavender accent */
+	"#7fb5c9",  /* 6  cyan    */
+	"#cdc6ee",  /* 7  white   */
+ 
 	/* 8 bright colors */
-	"#928374",
-	"#fb4934",
-	"#b8bb26",
-	"#fabd2f",
-	"#83a598",
-	"#d3869b",
-	"#8ec07c",
-	"#ebdbb2",
-
+	"#3a3855",  /* 8  bright black */
+	"#ee8ab4",  /* 9  bright red */
+	"#a6cba6",  /* 10 bright green */
+	"#ffcb85",  /* 11 bright yellow */
+	"#9aa8ee",  /* 12 bright blue */
+	"#cbb4f2",  /* 13 bright magenta */
+	"#9ccde0",  /* 14 bright cyan */
+	"#ece8ff",  /* 15 bright white */
+ 
 	[255] = 0,
+ 
+	/* extra colors (256+) */
+	"#b79ce6",  /* 256 cursor       */
+	"#1b1a29",  /* 257 reverse cursor */
+	"#cdc6ee",  /* 258 default fg   */
+	"#1b1a29",  /* 259 default bg   */
 
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"gray90", /* default foreground colour */
-	"#1a1a1a", /* default background colour */
 };
+
 
 float alpha = 0.8;
 
